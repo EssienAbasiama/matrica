@@ -1,0 +1,444 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #242424;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+}
+
+body .popup {
+  position: absolute;
+  width: 80%;
+  height: 400px;
+  max-width: 800px;
+  background-color: #242424;
+  border-radius: 4px;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 10px #000;
+          box-shadow: 1px 1px 10px #000;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+  top: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  border-radius: 10px;
+  color: #fff;
+}
+
+body .popup.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .popup h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body .popup ul li {
+  list-style: none;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+body .popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #4e4e4e;
+}
+
+.navbar {
+  background-color: #242424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: #fff solid 1px;
+  height: 15vh;
+  padding: 0 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar .cta button {
+  background-color: #eefa78;
+  color: #000;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.navbar .search_bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #202020;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  max-width: 800px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.navbar .search_bar input {
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin-left: 20px;
+  outline: none;
+  color: #fff;
+}
+
+.navbar .search_bar i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.body {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.body h1 {
+  font-size: clamp(2.5rem, 12vw, 5rem);
+}
+
+.body h1 span {
+  color: #eefa78;
+}
+
+.body b {
+  max-width: 500px;
+  text-align: center;
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.body button {
+  background-color: #eefa78;
+  color: #000;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.body img {
+  width: 65rem;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.body h3 {
+  text-align: center;
+  font-size: clamp(1.5rem, 12vw, 2.5rem);
+  margin: 100px 0;
+  font-weight: 500;
+}
+
+.body .metaverse_passport {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  margin: auto;
+}
+
+.body .metaverse_passport .image {
+  width: 60%;
+}
+
+.body .metaverse_passport .image img {
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.body .metaverse_passport .cards {
+  width: 37%;
+  height: 30vh;
+}
+
+.body .metaverse_passport .cards .meta {
+  background-color: #313131;
+  border-radius: 8px;
+  border: 1px solid #4e4e4e;
+  padding: 10px;
+}
+
+.body .metaverse_passport .cards .meta .meta_b {
+  font-size: 1rem;
+}
+
+.body .metaverse_passport .cards .meta ul {
+  padding: 10px 25px;
+}
+
+.body .metaverse_passport .cards .meta ul li {
+  font-size: 15px;
+}
+
+.body .metaverse_passport .cards .meta_other {
+  width: 100%;
+  border: 1px solid #4e4e4e;
+  border-radius: 8px;
+  padding: 25px 7px;
+  margin: 20px 0;
+}
+
+.body .metaverse_passport .cards .meta_other b {
+  margin-left: 15px;
+}
+
+.body .metaverse_passport .cards .meta_other b span {
+  color: #eefa78;
+  margin-left: 15px;
+}
+
+.body .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 60px 0;
+  width: 60%;
+  max-width: 1200px;
+}
+
+.body .stats h1 {
+  font-size: clamp(1.5rem, 10vw, 2.5rem);
+  font-weight: 600;
+  text-align: center;
+}
+
+.body .stats h1 span {
+  color: #eefa78;
+}
+
+.body .testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: 0;
+  max-width: 1200px;
+  padding: 30px 0;
+}
+
+.body .testimonials .testimonial_card {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 8px;
+  height: 20rem;
+  width: 20rem;
+  margin: 20px;
+}
+
+.body .testimonials .testimonial_card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body .testimonials .testimonial_card .profile .dp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.body .testimonials .testimonial_card .profile .name b {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.body .testimonials .testimonial_card .profile .name p {
+  color: #4e4e4e;
+  margin-top: 0;
+}
+
+.body .testimonials .testimonial_card p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.body .last_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.body .last_div img {
+  width: 38rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 10vh;
+  }
+  .navbar .search_bar {
+    display: none;
+  }
+  .body img {
+    width: 400px;
+  }
+  .body .metaverse_passport {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+  .body .metaverse_passport .image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .body .metaverse_passport .image img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .body .metaverse_passport .cards {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .body .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .body .stats h1 {
+    margin: 20px 0;
+  }
+  .body .last_div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .body .last_div img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

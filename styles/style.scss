@@ -1,0 +1,336 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+}
+$accent: #eefa78;
+body {
+  background-color: #242424;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  .popup {
+    position: absolute;
+    width: 80%;
+    height: 400px;
+    max-width: 800px;
+    background-color: #242424;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 1px 1px 10px #000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+    top: 50px;
+    position: sticky;
+    border-radius: 10px;
+    color: #fff;
+    &.active {
+      display: flex;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    ul {
+      li {
+        list-style: none;
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #4e4e4e;
+    }
+  }
+}
+
+.navbar {
+  background-color: #242424;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #fff solid 1px;
+  height: 15vh;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .logo {
+  }
+  .cta {
+    button {
+      background-color: $accent;
+      color: #000;
+      outline: none;
+      border: none;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      font-weight: bolder;
+      cursor: pointer;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+  }
+  .search_bar {
+    display: flex;
+    width: 100%;
+    background-color: #202020;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    input {
+      width: 100%;
+      background-color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      font-weight: bolder;
+      cursor: pointer;
+      border-radius: 3px;
+      text-transform: uppercase;
+      background-color: transparent;
+      margin-left: 20px;
+      outline: none;
+      color: #fff;
+    }
+    i {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 1rem;
+    }
+  }
+}
+.body {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+
+  h1 {
+    font-size: clamp(2.5rem, 12vw, 5rem);
+    span {
+      color: $accent;
+    }
+  }
+  b {
+    max-width: 500px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0;
+  }
+  button {
+    background-color: $accent;
+    color: #000;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  img {
+    width: 65rem;
+    margin-top: 50px;
+    border-radius: 10px;
+  }
+  h3 {
+    text-align: center;
+    font-size: clamp(1.5rem, 12vw, 2.5rem);
+    margin: 100px 0;
+    font-weight: 500;
+  }
+  .metaverse_passport {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    .image {
+      width: 60%;
+      img {
+        width: 100%;
+        margin-top: 0 !important;
+      }
+    }
+    .cards {
+      width: 37%;
+      height: 30vh;
+      .meta {
+        background-color: #313131;
+        border-radius: 8px;
+        border: 1px solid #4e4e4e;
+        padding: 10px;
+        .meta_b {
+          font-size: 1rem;
+        }
+        ul {
+          padding: 10px 25px;
+          li {
+            font-size: 15px;
+          }
+        }
+      }
+      .meta_other {
+        width: 100%;
+        border: 1px solid #4e4e4e;
+        border-radius: 8px;
+        padding: 25px 7px;
+        margin: 20px 0;
+        b {
+          margin-left: 15px;
+          span {
+            color: $accent;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+  .stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+    width: 60%;
+    max-width: 1200px;
+    h1 {
+      font-size: clamp(1.5rem, 10vw, 2.5rem);
+      font-weight: 600;
+      text-align: center;
+
+      span {
+        color: $accent;
+      }
+    }
+  }
+  .testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0;
+    max-width: 1200px;
+    padding: 30px 0;
+    .testimonial_card {
+      background-color: #181818;
+      padding: 20px;
+      border-radius: 8px;
+      height: 20rem;
+      width: 20rem;
+      margin: 20px;
+      .profile {
+        display: flex;
+        align-items: center;
+        .dp {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #fff;
+          margin-right: 10px;
+        }
+        .name {
+          b {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+          p {
+            color: #4e4e4e;
+            margin-top: 0;
+          }
+        }
+      }
+      p {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 40px;
+      }
+    }
+  }
+  .last_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1200px;
+    img {
+      width: 38rem;
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 10vh;
+    .search_bar {
+      display: none;
+    }
+  }
+  .body {
+    img {
+      width: 400px;
+    }
+    .metaverse_passport {
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      .image {
+        width: 100%;
+        img {
+          width: 100%;
+          max-width: 400px;
+        }
+        margin-bottom: 20px;
+      }
+      .cards {
+        width: 100%;
+        height: fit-content;
+      }
+    }
+    .stats {
+      flex-direction: column;
+      height: fit-content;
+      width: 100%;
+      h1 {
+        margin: 20px 0;
+      }
+    }
+    .last_div {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+}
